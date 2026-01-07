@@ -6,8 +6,10 @@ function App() {
   const [customers, setCustomers] = useState([])
   
   
-  const API_URL = "http://localhost:4002/api/customers"
-
+const API_URL = import.meta.env.PROD 
+  ? "/api/customers" 
+  : "http://localhost:4002/api/customers";
+  
   useEffect(() => {
     fetch(API_URL)
       .then((res) => res.json())
