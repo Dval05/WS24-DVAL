@@ -37,7 +37,7 @@ function App() {
       header: 'Type', 
       accessor: 'type',
       render: (customer) => {
-        const isFrequent = customer.type === "Frquent"; // Ojo con tu typo en la BD 'Frquent'
+        const isFrequent = customer.type === "Frquent"; 
         return (
           <span className="status-badge" style={{
             backgroundColor: isFrequent ? '#dcfce7' : '#fef9c3',
@@ -65,11 +65,11 @@ function App() {
 
       <div className="stats-grid">
         <div className="stat-card">
-          <span className="stat-title">Ingresos Totales</span>
+          <span className="stat-title">Total Sales </span>
           <span className="stat-value">${totalSales}</span>
         </div>
         <div className="stat-card">
-          <span className="stat-title">Clientes Registrados</span>
+          <span className="stat-title">Registered Customers</span>
           <span className="stat-value">{customers.length}</span>
         </div>
       </div>
